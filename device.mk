@@ -37,9 +37,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_ven
 # Configure twrp common.mk
 $(call inherit-product, vendor/twrp/config/common.mk)
 
-# some OrangeFox-specific settings
-$(call inherit-product, $(DEVICE_PATH)/fox_gold.mk)
-
 # API
 PRODUCT_SHIPPING_API_LEVEL := 31
 PRODUCT_TARGET_VNDK_VERSION := 35
