@@ -115,9 +115,7 @@ on property:crypto.ready=0
     stop tee-supplicant
     stop miteelog
 
-on property:twrp.modules.loaded=true
-    start load-touch-module
-
 on boot
     start vendor.health-default
     setprop sys.usb.config adb
+    start load-touch-module
