@@ -189,7 +189,6 @@ TW_SUPPORT_INPUT_AIDL_HAPTICS := true
 
 # Indicator
 TW_CUSTOM_CPU_TEMP_PATH := "/sys/class/thermal/thermal_zone9/temp"
-TW_BATTERY_SYSFS_WAIT_SECONDS := 6
 
 # init_boot ramdisk
 BOARD_VENDOR_RAMDISK_FRAGMENTS := init_boot
