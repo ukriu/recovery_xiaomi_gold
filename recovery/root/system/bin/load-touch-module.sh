@@ -1,19 +1,15 @@
-sleep 60
 set +e
 
-MOD="focaltech_tp.ko"
-MOD_PATH="/vendor/lib/modules"
-MOD_DEPS=(xiaomi_touch.ko hq_notifier.ko)
+main_mod="focaltech_tp.ko"
+mod_dir="/vendor/lib/modules"
+mod_deps=(mt6359p-accdet.ko xiaomi_touch.ko hq_notifier.ko)
 
-load_module() {
-  local mod="$1"
-  insmod "$MOD_PATH"/"$mod" 2>/dev/null
-}
-
-for dep in "${MOD_DEPS[@]}"; do
-  load_module "$dep"
+# load the main module's dependencies
+for dep in "${mod_deps[@]}"; do
+  insmod $mod_dir/$dep
 done
 
-load_module "$MOD"
+# load the main module
+insmod $mod_dir/$main_mod
 
 exit 0
