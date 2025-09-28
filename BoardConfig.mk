@@ -185,7 +185,6 @@ TW_ENABLE_FS_COMPRESSION := false
 
 # Haptics
 TW_SUPPORT_INPUT_AIDL_HAPTICS := true
-TW_SUPPORT_INPUT_AIDL_HAPTICS_FQNAME := "IVibrator/default"
 
 # Indicator
 TW_CUSTOM_CPU_TEMP_PATH := "/sys/class/thermal/thermal_zone9/temp"
