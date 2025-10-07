@@ -184,11 +184,11 @@ TW_INCLUDE_FUSE_NTFS := true
 TW_INCLUDE_FUSE_EXFAT := true
 TW_ENABLE_FS_COMPRESSION := false
 
-# Haptics
-TW_SUPPORT_INPUT_AIDL_HAPTICS := true
+# NO Haptics
+TW_NO_HAPTICS := true
 
 # Indicator
-TW_CUSTOM_CPU_TEMP_PATH := "/sys/class/thermal/thermal_zone9/temp"
+#TW_CUSTOM_CPU_TEMP_PATH := "/sys/class/thermal/thermal_zone9/temp"
 
 # init_boot ramdisk
 BOARD_VENDOR_RAMDISK_FRAGMENTS := init_boot

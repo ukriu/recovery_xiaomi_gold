@@ -1,9 +1,0 @@
-service vendor.vibrator-service /vendor/bin/hw/android.hardware.vibrator-service.mediatek
-    user root
-    group root
-    disabled
-    seclabel u:r:recovery:s0
-
-on boot
-    write /sys/class/leds/vibrator/trigger "transient"
-    start vendor.vibrator-service

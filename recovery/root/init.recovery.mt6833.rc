@@ -1,6 +1,4 @@
 import /init.mitee.rc
-import /init.vibrator.rc
-import /init.hals.rc
 
 # Set SELinux to Permissive
 on early-init
@@ -25,7 +23,7 @@ on late-fs
     mount_all /first_stage_ramdisk/fstab.mt6833 --late
 
 on post-fs
-    start vendor.boot-default
+    start boot-hal-1-2
 
     # Support A/B feature for EMMC and UFS boot region
     wait /dev/block/mmcblk0boot0 2
@@ -116,6 +114,6 @@ on property:crypto.ready=0
     stop miteelog
 
 on boot
-    start vendor.health-default
+    start health-hal-2-1
     setprop sys.usb.config adb
     start load-touch-module
