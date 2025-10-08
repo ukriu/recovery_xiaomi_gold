@@ -13,7 +13,13 @@ on init
 
 on fs
     install_keyring
-
+    mkdir /mnt/vendor/persist 0755 system system
+    mkdir /persist 0755 system system
+    mount_all /system/etc/persist.fstab --early
+    restorecon_recursive /mnt/vendor/persist
+    mkdir /mnt/vendor/persist/data 0755 system system
+    mount none /mnt/vendor/persist /persist bind
+ 
 # We need vold early for metadata encryption
 on early-fs
     start vold
