@@ -1,5 +1,6 @@
-gold 6.6 twrp report
+### Xiaomi gold recovery device tree report
+### Kernel 6.6.x -- twrp_14.1
 
-- Fixed touch issue
-- Fixed Partial decryption
-- kernel panic on usb port plug/unplug
+- Touchscreen driver refuses to load [FIXED]
+- Partial decryption [FIXED]
+- Kernel panic on usb port plug/unplug [FIXED]
