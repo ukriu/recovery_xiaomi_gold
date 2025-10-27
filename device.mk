@@ -133,10 +133,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.system.keystore2
 
-# mtk plpath utils
+# create pl dev
 PRODUCT_PACKAGES += \
-    mtk_plpath_utils \
-    mtk_plpath_utils.recovery
+    create_pl_dev \
+    create_pl_dev.recovery
 
 # Copy fstab
 PRODUCT_COPY_FILES += \
