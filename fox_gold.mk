@@ -40,6 +40,9 @@ OF_USE_GREEN_LED := 0
 OF_FLASHLIGHT_ENABLE := 0
 OF_FORCE_CASEFOLDING := 1
 
+# use aidl boot control to fix error when switching boot slot
+OF_USE_AIDL_BOOT_CONTROL := 1
+
 # number of list options before scrollbar creation
 OF_OPTIONS_LIST_NUM := 9
 
