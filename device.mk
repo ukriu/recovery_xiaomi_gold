@@ -118,6 +118,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES_DEBUG += \
     bootctrl
 
+TARGET_RECOVERY_DEVICE_MODULES += \
+  android.hardware.boot@1.0.xml \
+  android.hardware.boot@1.1.xml \
+  android.hardware.boot@1.2.xml
+
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl \
