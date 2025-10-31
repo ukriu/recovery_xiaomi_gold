@@ -53,7 +53,6 @@ PRODUCT_PROPERTY_OVERRIDES += ro.twrp.vendor_boot=true
 # A/B
 AB_OTA_UPDATER := true
 ENABLE_VIRTUAL_AB := true
-TARGET_ENFORCE_AB_OTA_PARTITION_LIST := true
 AB_OTA_PARTITIONS += \
     apusys \
     audio_dsp \
@@ -93,11 +92,12 @@ PRODUCT_PACKAGES += \
     update_engine \
     update_engine_sideload \
     update_verifier \
-    checkpoint_gc
+    checkpoint_gc \
+    otapreopt_script
 
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
-    POSTINSTALL_PATH_system=system/bin/mtk_plpath_utils \
+    POSTINSTALL_PATH_system=system/bin/otapreopt_script \
     FILESYSTEM_TYPE_system=erofs \
     POSTINSTALL_OPTIONAL_system=true
 
