@@ -110,21 +110,6 @@ AB_OTA_POSTINSTALL_CONFIG += \
 # Dynamic
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
-# Health
-PRODUCT_PACKAGES += \
-    android.hardware.health@2.1-impl \
-    android.hardware.health@2.1-service
-
-# Security
-PRODUCT_PACKAGES += \
-    android.hardware.security.keymint \
-    android.hardware.security.secureclock \
-    android.hardware.security.sharedsecret
-
-# Keystore Hal
-PRODUCT_PACKAGES += \
-    android.system.keystore2
-
 # create pl dev
 PRODUCT_PACKAGES += \
     create_pl_dev \
