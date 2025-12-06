@@ -60,6 +60,13 @@ on fs
     setprop sys.usb.mtp.device_type 3
     setprop sys.usb.configfs 1
 
+    # Fix: Manually set USB config and start ADB early.
+    # This prevents ADB/MTP failure when TWRP decrypts data automatically 
+    # (i.e., when no pattern/password is set on the device).
+    setprop sys.usb.config mtp,adb
+    start adbd
+    setprop sys.usb.ffs.ready 1
+
 on property:ro.boot.usbcontroller=*
     setprop sys.usb.controller ${ro.boot.usbcontroller}
     write /sys/class/udc/${ro.boot.usbcontroller}/device/../mode peripheral
