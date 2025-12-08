@@ -126,6 +126,10 @@ TARGET_BOARD_PLATFORM := mt6833
 # Properties
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 
+# Device Init
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_gold
+TARGET_RECOVERY_DEVICE_MODULES := libinit_gold
+
 # Device Fstab
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/system/etc/recovery.fstab
 
