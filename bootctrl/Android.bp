@@ -33,14 +33,9 @@ cc_library_shared {
         "libhidlbase",
         "libhardware",
         "libutils",
-        "libbase",
-        "libfs_mgr",
-        "libgsi",
-        "libbootloader_message",
-        "libcutils",
         "android.hardware.boot@1.0",
         "android.hardware.boot@1.1",
-        "android.hardware.boot@1.2",
+        "android.hardware.boot@1.2"
     ],
     static_libs: [
         "libboot_control",
