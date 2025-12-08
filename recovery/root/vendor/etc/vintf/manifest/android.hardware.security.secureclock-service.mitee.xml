@@ -1,10 +1,6 @@
-<!--
-    Input:
-        vendor/xiaomi/proprietary/mitee_ca/keymint/android.hardware.security.secureclock-service.mitee.xml
--->
 <manifest version="1.0" type="device">
-    <hal format="aidl">
-        <name>android.hardware.security.secureclock</name>
-        <fqname>ISecureClock/default</fqname>
-    </hal>
+	<hal format="aidl">
+		<name>android.hardware.security.secureclock</name>
+		<fqname>ISecureClock/default</fqname>
+	</hal>
 </manifest>

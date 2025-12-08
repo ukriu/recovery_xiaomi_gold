@@ -19,7 +19,7 @@
 #
 
 # maintainer
-OF_MAINTAINER := bintang_rakagooning
+OF_MAINTAINER := @gacorprjkt
 
 # screen settings
 OF_SCREEN_H := 2400

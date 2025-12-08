@@ -5,86 +5,70 @@ on early-init
     write /sys/fs/selinux/enforce 0
 
 on init
-    setprop sys.usb.configfs 1
-    setprop sys.usb.controller "musb-hdrc"
-    setprop sys.usb.ffs.aio_compat 1
     export LD_LIBRARY_PATH /system/lib64:/vendor/lib64:/vendor/lib64/hw
-    setprop crypto.ready 1
+
+on late-fs
+    # Mount RW partitions which need run fsck
+    mount_all /first_stage_ramdisk/fstab.mt6833 --late
+
+on property:ro.crypto.state=encrypted && property:ro.crypto.type=file
+    install_keyring
 
 on fs
-    install_keyring
     mkdir /mnt/vendor/persist 0755 system system
     mkdir /persist 0755 system system
     mount_all /system/etc/persist.fstab --early
     restorecon_recursive /mnt/vendor/persist
     mkdir /mnt/vendor/persist/data 0755 system system
     mount none /mnt/vendor/persist /persist bind
- 
-# We need vold early for metadata encryption
-on early-fs
-    start vold
 
-on late-fs
-    # Mount RW partitions which need run fsck
-    mount_all /first_stage_ramdisk/fstab.mt6833 --late
-
-on post-fs
-    start boot-hal-1-2
-
-# Services
-service keymint-mitee /vendor/bin/hw/android.hardware.security.keymint@3.0-service.mitee
+service vendor.keymint-mitee /vendor/bin/hw/android.hardware.security.keymint@1.0-service.mitee
     user root
     group root
     disabled
     seclabel u:r:recovery:s0
 
-service vendor.gatekeeper-mitee /vendor/bin/hw/android.hardware.gatekeeper-service.mitee
+service vendor.gatekeeper-1-0 /vendor/bin/hw/android.hardware.gatekeeper@1.0-service
     user root
     group root
     disabled
     seclabel u:r:recovery:s0
 
-service load-touch-module /sbin/sh /system/bin/load-touch-module.sh
+service load-touch-module /system/bin/load-touch-module.sh
     user root
     group root
     oneshot
     disabled
     seclabel u:r:recovery:s0
 
-#####
-
 on property:crypto.ready=1
-    start keymint-mitee
+    start vendor.keymint-mitee
 
 on property:hwservicemanager.ready=true
-    start keymint-mitee
-    start vendor.gatekeeper-mitee
+    start vendor.keymint-mitee
+    start vendor.gatekeeper-1-0
 
 on property:ro.crypto.state=unsupported
-    stop keymint-mitee
-    stop vendor.gatekeeper-mitee
     stop tee-supplicant
-    stop miteelog
-    
+    stop vendor.keymint-mitee
+    stop vendor.gatekeeper-1-0
+
 on property:ro.crypto.state=unencrypted
-    stop keymint-mitee
-    stop vendor.gatekeeper-mitee
     stop tee-supplicant
-    stop miteelog
+    stop vendor.keymint-mitee
+    stop vendor.gatekeeper-1-0
 
 on property:twrp.decrypt.done=true
-    stop keymint-mitee
-    stop vendor.gatekeeper-mitee
     stop tee-supplicant
-    stop miteelog
+    stop vendor.keymint-mitee
+    stop vendor.gatekeeper-1-0
 
 on property:crypto.ready=0
-    stop keymint-mitee
-    stop vendor.gatekeeper-mitee
     stop tee-supplicant
-    stop miteelog
+    stop vendor.keymint-mitee
+    stop vendor.gatekeeper-1-0
 
 on boot
+    start boot-hal-1-2
     start health-hal-2-1
     start load-touch-module
-    setprop sys.usb.config adb

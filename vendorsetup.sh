@@ -18,20 +18,22 @@
 # 	Please maintain this if you use this script or any part of it
 #
 
-export FOX_VIRTUAL_AB_DEVICE=1
-export FOX_ENABLE_APP_MANAGER=1
+export FOX_VARIANT="MIUI"
+export FOX_MAINTAINER_PATCH_VERSION=$(date +"%Y%m%d")
+export FOX_TARGET_DEVICES="gold"
+export TARGET_DEVICE_ALT="gold"
 export FOX_RECOVERY_VENDOR_BOOT_PARTITION="/dev/block/by-name/vendor_boot"
 export FOX_RECOVERY_SYSTEM_PARTITION="/dev/block/mapper/system"
 export FOX_RECOVERY_VENDOR_PARTITION="/dev/block/mapper/vendor"
 export FOX_VENDOR_BOOT_RECOVERY=1
+export FOX_VIRTUAL_AB_DEVICE=1
+export FOX_ENABLE_APP_MANAGER=1
 export FOX_USE_XZ_UTILS=1
 export FOX_USE_UPDATED_MAGISKBOOT=1
-export FOX_TARGET_DEVICES=gold
-export TARGET_DEVICE_ALT=gold
 export FOX_DISABLE_UPDATEZIP=1
 export FOX_DELETE_AROMAFM=1
 export FOX_DELETE_MAGISK_ADDON=1
 export FOX_DELETE_INITD_ADDON=1
 export FOX_REMOVE_BASH=1
 export FOX_REMOVE_AAPT=1
-export FOX_VARIANT="A15"
+
