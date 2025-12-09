@@ -14,6 +14,6 @@ for dep in ${deps[@]}; do
 done
 
 # load the main module
-insmod $mod_dir/$main_mod force_load=1
+insmod $mod_dir/$main_mod
 
 exit 0
