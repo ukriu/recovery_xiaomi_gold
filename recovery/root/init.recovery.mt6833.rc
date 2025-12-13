@@ -44,7 +44,7 @@ service vendor.gatekeeper-mitee /vendor/bin/hw/android.hardware.gatekeeper-servi
     disabled
     seclabel u:r:recovery:s0
 
-service load-touch-module /sbin/sh /system/bin/load-touch-module.sh
+service load-ts-drv /sbin/sh /system/bin/load-ts-drv.sh
     user root
     group root
     oneshot
@@ -86,5 +86,6 @@ on property:crypto.ready=0
 
 on boot
     start health-hal-2-1
-    start load-touch-module
+    start load-ts-drv
     setprop sys.usb.config adb
+
