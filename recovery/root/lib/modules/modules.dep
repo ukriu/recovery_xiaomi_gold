@@ -28,7 +28,7 @@
 /lib/modules/mtk_chg_type_det.ko: /lib/modules/tcpc_class.ko /lib/modules/pd_dbg_info.ko /lib/modules/charger_class.ko
 /lib/modules/mtk_iommu.ko: /lib/modules/mtk_iommu_util.ko /lib/modules/iommu_secure.ko /lib/modules/mtk-smi-dbg.ko /lib/modules/emi.ko /lib/modules/emi-mpu.ko /lib/modules/mtk-smi.ko /lib/modules/iommu_debug.ko /lib/modules/mrdump.ko /lib/modules/aee_aed.ko
 /lib/modules/mtk-socinfo.ko:
-/lib/modules/mtk_pep20.ko: /lib/modules/mtk_charger_framework.ko /lib/modules/adapter_class.ko /lib/modules/mtk_charger_algorithm_class.ko /lib/modules/charger_class.ko /lib/modules/mtk_disp_notify.ko
+/lib/modules/mtk_pep20.ko: /lib/modules/mtk_charger_framework.ko /lib/modules/hq_notify.ko /lib/modules/adapter_class.ko /lib/modules/mtk_charger_algorithm_class.ko /lib/modules/charger_class.ko /lib/modules/mtk_disp_notify.ko
 /lib/modules/monitor_hang.ko: /lib/modules/mrdump.ko
 /lib/modules/mtk-afe-external.ko:
 /lib/modules/pwm-mtk-disp.ko:
@@ -50,7 +50,7 @@
 /lib/modules/spi_slave.ko:
 /lib/modules/mtk-kpd.ko:
 /lib/modules/clk-mt6833-vcodec.ko: /lib/modules/clk-common.ko /lib/modules/aee_aed.ko
-/lib/modules/mt6359p_battery.ko: /lib/modules/pmic_lbat_service.ko /lib/modules/mtk_charger_framework.ko /lib/modules/adapter_class.ko /lib/modules/mtk_charger_algorithm_class.ko /lib/modules/tcpc_class.ko /lib/modules/pd_dbg_info.ko /lib/modules/charger_class.ko /lib/modules/mtk_disp_notify.ko /lib/modules/aee_aed.ko
+/lib/modules/mt6359p_battery.ko: /lib/modules/pmic_lbat_service.ko /lib/modules/mtk_charger_framework.ko /lib/modules/hq_notify.ko /lib/modules/adapter_class.ko /lib/modules/mtk_charger_algorithm_class.ko /lib/modules/tcpc_class.ko /lib/modules/pd_dbg_info.ko /lib/modules/charger_class.ko /lib/modules/mtk_disp_notify.ko /lib/modules/aee_aed.ko
 /lib/modules/pinctrl-mtk-common-v2_debug.ko: /lib/modules/pinctrl-mtk-v2.ko
 /lib/modules/mtk_panel_ext.ko:
 /lib/modules/extcon-mtk-usb.ko: /lib/modules/tcpc_class.ko /lib/modules/pd_dbg_info.ko
@@ -72,7 +72,7 @@
 /lib/modules/leds-mtk-disp.ko: /lib/modules/mediatek-drm.ko /lib/modules/clkbuf.ko /lib/modules/spmi-mtk-pmif.ko /lib/modules/spi_slave.ko /lib/modules/drm_display_helper.ko /lib/modules/miev.ko /lib/modules/cmdq_helper_inf.ko /lib/modules/mtk_disp_notify.ko /lib/modules/drm_dma_helper.ko /lib/modules/mmqos-common.ko /lib/modules/mtk-mmdvfs-debug.ko /lib/modules/mtk-mmdebug-vcp-stub.ko /lib/modules/mtk-mmdvfs.ko /lib/modules/mtk-mmdvfs-ftrace.ko /lib/modules/mtk_dramc.ko /lib/modules/leds-mtk.ko /lib/modules/mtk-mml.ko /lib/modules/system_heap.ko /lib/modules/mtk_sync.ko /lib/modules/mtk-icc-core.ko /lib/modules/mtk-cmdq-drv-ext.ko /lib/modules/device-apc-common.ko /lib/modules/mtk-smi-dbg.ko /lib/modules/emi.ko /lib/modules/emi-mpu.ko /lib/modules/mtk-smi.ko /lib/modules/iommu_debug.ko /lib/modules/mmprofile.ko /lib/modules/mme.ko /lib/modules/irq-dbg.ko /lib/modules/mtk_panel_ext.ko /lib/modules/mrdump.ko /lib/modules/clk-common.ko /lib/modules/aee_aed.ko
 /lib/modules/cmdq-bdg-mailbox.ko: /lib/modules/spi_slave.ko /lib/modules/mmprofile.ko /lib/modules/aee_aed.ko
 /lib/modules/iommu_debug.ko: /lib/modules/mrdump.ko /lib/modules/aee_aed.ko
-/lib/modules/mtk_charger_framework.ko: /lib/modules/adapter_class.ko /lib/modules/mtk_charger_algorithm_class.ko /lib/modules/charger_class.ko /lib/modules/mtk_disp_notify.ko
+/lib/modules/mtk_charger_framework.ko: /lib/modules/hq_notify.ko /lib/modules/adapter_class.ko /lib/modules/mtk_charger_algorithm_class.ko /lib/modules/charger_class.ko /lib/modules/mtk_disp_notify.ko
 /lib/modules/tcpc_mt6360.ko: /lib/modules/tcpc_class.ko /lib/modules/pd_dbg_info.ko /lib/modules/charger_class.ko
 /lib/modules/mtk_wdt.ko:
 /lib/modules/panel-n17-36-02-0a-dsc-vdo.ko: /lib/modules/hqsysfs.ko /lib/modules/hqsys_pcba.ko /lib/modules/mediatek-drm.ko /lib/modules/clkbuf.ko /lib/modules/spmi-mtk-pmif.ko /lib/modules/spi_slave.ko /lib/modules/drm_display_helper.ko /lib/modules/miev.ko /lib/modules/cmdq_helper_inf.ko /lib/modules/mtk_disp_notify.ko /lib/modules/drm_dma_helper.ko /lib/modules/mmqos-common.ko /lib/modules/mtk-mmdvfs-debug.ko /lib/modules/mtk-mmdebug-vcp-stub.ko /lib/modules/mtk-mmdvfs.ko /lib/modules/mtk-mmdvfs-ftrace.ko /lib/modules/mtk_dramc.ko /lib/modules/leds-mtk.ko /lib/modules/mtk-mml.ko /lib/modules/system_heap.ko /lib/modules/mtk_sync.ko /lib/modules/mtk-icc-core.ko /lib/modules/mtk-cmdq-drv-ext.ko /lib/modules/device-apc-common.ko /lib/modules/mtk-smi-dbg.ko /lib/modules/emi.ko /lib/modules/emi-mpu.ko /lib/modules/mtk-smi.ko /lib/modules/iommu_debug.ko /lib/modules/mmprofile.ko /lib/modules/mme.ko /lib/modules/irq-dbg.ko /lib/modules/mtk_panel_ext.ko /lib/modules/mrdump.ko /lib/modules/clk-common.ko /lib/modules/aee_aed.ko
@@ -88,7 +88,7 @@
 /lib/modules/gf_spi_tee.ko: /lib/modules/mediatek-drm.ko /lib/modules/clkbuf.ko /lib/modules/spmi-mtk-pmif.ko /lib/modules/spi_slave.ko /lib/modules/drm_display_helper.ko /lib/modules/miev.ko /lib/modules/cmdq_helper_inf.ko /lib/modules/mtk_disp_notify.ko /lib/modules/drm_dma_helper.ko /lib/modules/mmqos-common.ko /lib/modules/mtk-mmdvfs-debug.ko /lib/modules/mtk-mmdebug-vcp-stub.ko /lib/modules/mtk-mmdvfs.ko /lib/modules/mtk-mmdvfs-ftrace.ko /lib/modules/mtk_dramc.ko /lib/modules/leds-mtk.ko /lib/modules/mtk-mml.ko /lib/modules/system_heap.ko /lib/modules/mtk_sync.ko /lib/modules/mtk-icc-core.ko /lib/modules/mtk-cmdq-drv-ext.ko /lib/modules/device-apc-common.ko /lib/modules/mtk-smi-dbg.ko /lib/modules/emi.ko /lib/modules/emi-mpu.ko /lib/modules/mtk-smi.ko /lib/modules/iommu_debug.ko /lib/modules/mmprofile.ko /lib/modules/mme.ko /lib/modules/spi-mt65xx.ko /lib/modules/irq-dbg.ko /lib/modules/mtk_panel_ext.ko /lib/modules/mrdump.ko /lib/modules/clk-common.ko /lib/modules/aee_aed.ko
 /lib/modules/mtk-uart-apdma.ko:
 /lib/modules/mtk-cqdma.ko:
-/lib/modules/mtk_pep.ko: /lib/modules/mtk_charger_framework.ko /lib/modules/adapter_class.ko /lib/modules/mtk_charger_algorithm_class.ko /lib/modules/charger_class.ko /lib/modules/mtk_disp_notify.ko
+/lib/modules/mtk_pep.ko: /lib/modules/mtk_charger_framework.ko /lib/modules/hq_notify.ko /lib/modules/adapter_class.ko /lib/modules/mtk_charger_algorithm_class.ko /lib/modules/charger_class.ko /lib/modules/mtk_disp_notify.ko
 /lib/modules/hqsys_misc.ko: /lib/modules/hqsysfs.ko /lib/modules/hqsys_pcba.ko
 /lib/modules/mt6359p-regulator.ko:
 /lib/modules/ds28e30_verify.ko: /lib/modules/battery_auth_class.ko
@@ -126,14 +126,15 @@
 /lib/modules/usb_meta.ko: /lib/modules/bootprof.ko
 /lib/modules/device-apc-mt6833.ko: /lib/modules/device-apc-common.ko /lib/modules/aee_aed.ko
 /lib/modules/emi-mpu.ko: /lib/modules/aee_aed.ko
+/lib/modules/zsmalloc.ko:
 /lib/modules/sec-rng.ko:
 /lib/modules/mtk_pd_adapter.ko: /lib/modules/adapter_class.ko /lib/modules/tcpc_class.ko /lib/modules/pd_dbg_info.ko
 /lib/modules/mtk_printk_ctrl.ko:
 /lib/modules/stick_verify.ko: /lib/modules/battery_auth_class.ko
 /lib/modules/system_heap.ko:
-/lib/modules/mtk_pep40.ko: /lib/modules/mtk_charger_framework.ko /lib/modules/adapter_class.ko /lib/modules/mtk_charger_algorithm_class.ko /lib/modules/charger_class.ko /lib/modules/mtk_disp_notify.ko
+/lib/modules/mtk_pep40.ko: /lib/modules/mtk_charger_framework.ko /lib/modules/hq_notify.ko /lib/modules/adapter_class.ko /lib/modules/mtk_charger_algorithm_class.ko /lib/modules/charger_class.ko /lib/modules/mtk_disp_notify.ko
 /lib/modules/aee_rs.ko: /lib/modules/mediatek-drm.ko /lib/modules/clkbuf.ko /lib/modules/spmi-mtk-pmif.ko /lib/modules/spi_slave.ko /lib/modules/drm_display_helper.ko /lib/modules/miev.ko /lib/modules/cmdq_helper_inf.ko /lib/modules/mtk_disp_notify.ko /lib/modules/drm_dma_helper.ko /lib/modules/mmqos-common.ko /lib/modules/mtk-mmdvfs-debug.ko /lib/modules/mtk-mmdebug-vcp-stub.ko /lib/modules/mtk-mmdvfs.ko /lib/modules/mtk-mmdvfs-ftrace.ko /lib/modules/mtk_dramc.ko /lib/modules/leds-mtk.ko /lib/modules/mtk-mml.ko /lib/modules/system_heap.ko /lib/modules/mtk_sync.ko /lib/modules/mtk-icc-core.ko /lib/modules/mtk-cmdq-drv-ext.ko /lib/modules/device-apc-common.ko /lib/modules/mtk-smi-dbg.ko /lib/modules/emi.ko /lib/modules/emi-mpu.ko /lib/modules/mtk-smi.ko /lib/modules/iommu_debug.ko /lib/modules/mmprofile.ko /lib/modules/mme.ko /lib/modules/irq-dbg.ko /lib/modules/mtk_panel_ext.ko /lib/modules/mrdump.ko /lib/modules/clk-common.ko /lib/modules/aee_aed.ko
-/lib/modules/mt6360_pmu_chg.ko: /lib/modules/hq_notify.ko /lib/modules/adapter_class.ko /lib/modules/mtk_charger_algorithm_class.ko /lib/modules/charger_class.ko
+/lib/modules/mt6360_pmu_chg.ko: /lib/modules/adapter_class.ko /lib/modules/mtk_charger_algorithm_class.ko /lib/modules/charger_class.ko
 /lib/modules/musb_hdrc.ko: /lib/modules/phy-generic.ko /lib/modules/aee_aed.ko
 /lib/modules/irq-dbg.ko:
 /lib/modules/panel-truly-td4330-vdo.ko: /lib/modules/mtk_panel_ext.ko
@@ -157,10 +158,10 @@
 /lib/modules/battery_auth_class.ko:
 /lib/modules/mt6397.ko:
 /lib/modules/sc8551x_charger.ko: /lib/modules/hq_notify.ko /lib/modules/charger_class.ko
-/lib/modules/mtk_pd_charging.ko: /lib/modules/mtk_charger_framework.ko /lib/modules/adapter_class.ko /lib/modules/mtk_charger_algorithm_class.ko /lib/modules/charger_class.ko /lib/modules/mtk_disp_notify.ko
+/lib/modules/mtk_pd_charging.ko: /lib/modules/mtk_charger_framework.ko /lib/modules/hq_notify.ko /lib/modules/adapter_class.ko /lib/modules/mtk_charger_algorithm_class.ko /lib/modules/charger_class.ko /lib/modules/mtk_disp_notify.ko
 /lib/modules/bootprof.ko:
 /lib/modules/mtk_dramc.ko:
-/lib/modules/mtk_pep50.ko: /lib/modules/mtk_charger_framework.ko /lib/modules/adapter_class.ko /lib/modules/mtk_charger_algorithm_class.ko /lib/modules/charger_class.ko /lib/modules/mtk_disp_notify.ko
+/lib/modules/mtk_pep50.ko: /lib/modules/mtk_charger_framework.ko /lib/modules/hq_notify.ko /lib/modules/adapter_class.ko /lib/modules/mtk_charger_algorithm_class.ko /lib/modules/charger_class.ko /lib/modules/mtk_disp_notify.ko
 /lib/modules/mtk-emi.ko: /lib/modules/mtk-dvfsrc.ko /lib/modules/mtk-scpsys.ko /lib/modules/clk-common.ko /lib/modules/aee_aed.ko
 /lib/modules/panel-nt35695b-auo-vdo.ko: /lib/modules/mtk_panel_ext.ko
 /lib/modules/mtk-mmdvfs-debug.ko: /lib/modules/mtk-mmdebug-vcp-stub.ko /lib/modules/mtk-mmdvfs.ko /lib/modules/mtk-mmdvfs-ftrace.ko /lib/modules/mtk-smi-dbg.ko /lib/modules/emi.ko /lib/modules/emi-mpu.ko /lib/modules/mtk-smi.ko /lib/modules/mmprofile.ko /lib/modules/clk-common.ko /lib/modules/aee_aed.ko
@@ -170,7 +171,8 @@
 /lib/modules/clk-mt6833-mfgcfg.ko: /lib/modules/clk-common.ko /lib/modules/aee_aed.ko
 /lib/modules/mt635x-auxadc.ko:
 /lib/modules/load_track.ko:
-/lib/modules/mtk_battery_manager.ko: /lib/modules/mt6359p_battery.ko /lib/modules/pmic_lbat_service.ko /lib/modules/mtk_charger_framework.ko /lib/modules/adapter_class.ko /lib/modules/mtk_charger_algorithm_class.ko /lib/modules/tcpc_class.ko /lib/modules/pd_dbg_info.ko /lib/modules/charger_class.ko /lib/modules/mtk_disp_notify.ko /lib/modules/aee_aed.ko
+/lib/modules/zram.ko: /lib/modules/zsmalloc.ko
+/lib/modules/mtk_battery_manager.ko: /lib/modules/mt6359p_battery.ko /lib/modules/pmic_lbat_service.ko /lib/modules/mtk_charger_framework.ko /lib/modules/hq_notify.ko /lib/modules/adapter_class.ko /lib/modules/mtk_charger_algorithm_class.ko /lib/modules/tcpc_class.ko /lib/modules/pd_dbg_info.ko /lib/modules/charger_class.ko /lib/modules/mtk_disp_notify.ko /lib/modules/aee_aed.ko
 /lib/modules/pd-chk-mt6833.ko: /lib/modules/clk-chk-mt6833.ko /lib/modules/clk-common.ko /lib/modules/aee_aed.ko
 /lib/modules/cmdq_helper_inf.ko: /lib/modules/mtk-cmdq-drv-ext.ko /lib/modules/device-apc-common.ko /lib/modules/mtk-smi-dbg.ko /lib/modules/emi.ko /lib/modules/emi-mpu.ko /lib/modules/mtk-smi.ko /lib/modules/iommu_debug.ko /lib/modules/mmprofile.ko /lib/modules/irq-dbg.ko /lib/modules/mrdump.ko /lib/modules/aee_aed.ko
 /lib/modules/drm_display_helper.ko:

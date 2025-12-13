@@ -24,13 +24,13 @@ clk-mt6833-i2c.ko
 clk-mt6833-bus.ko
 clk-mt6833-vcodec.ko
 clk-mt6833-mfgcfg.ko
+mtk-scpsys.ko
+mtk-scpsys-bringup.ko
+mtk-scpsys-mt6833.ko
 clk-chk-mt6833.ko
 pd-chk-mt6833.ko
 clk-dbg-mt6833.ko
 clk-fmeter-mt6833.ko
-mtk-scpsys.ko
-mtk-scpsys-bringup.ko
-mtk-scpsys-mt6833.ko
 i2c-mt65xx.ko
 spi-mt65xx.ko
 mitee.ko
@@ -162,6 +162,8 @@ spi-mt65xx.ko
 aee_rs.ko
 mtk-cmdq-drv-ext.ko
 cmdq-platform-mt6833.ko
+zsmalloc.ko
+zram.ko
 clkbuf.ko
 reboot-mode.ko
 syscon-reboot-mode.ko
