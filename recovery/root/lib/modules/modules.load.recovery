@@ -162,8 +162,6 @@ spi-mt65xx.ko
 aee_rs.ko
 mtk-cmdq-drv-ext.ko
 cmdq-platform-mt6833.ko
-zsmalloc.ko
-zram.ko
 clkbuf.ko
 reboot-mode.ko
 syscon-reboot-mode.ko
