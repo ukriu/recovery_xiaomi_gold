@@ -177,3 +177,5 @@ hqsys_pcba.ko
 hqsys_misc.ko
 gf_spi_tee.ko
 fpc1022_tee.ko
+leds-mt6360.ko
+
