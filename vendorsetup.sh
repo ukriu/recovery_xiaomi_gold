@@ -17,6 +17,7 @@
 #
 # 	Please maintain this if you use this script or any part of it
 #
+export ALLOW_MISSING_DEPENDENCIES=true
 
 export FOX_VIRTUAL_AB_DEVICE=1
 export FOX_ENABLE_APP_MANAGER=1
@@ -24,14 +25,25 @@ export FOX_RECOVERY_VENDOR_BOOT_PARTITION="/dev/block/by-name/vendor_boot"
 export FOX_RECOVERY_SYSTEM_PARTITION="/dev/block/mapper/system"
 export FOX_RECOVERY_VENDOR_PARTITION="/dev/block/mapper/vendor"
 export FOX_VENDOR_BOOT_RECOVERY=1
-export FOX_USE_XZ_UTILS=1
 export FOX_USE_UPDATED_MAGISKBOOT=1
 export FOX_TARGET_DEVICES=gold
 export TARGET_DEVICE_ALT=gold
 export FOX_DISABLE_UPDATEZIP=1
-export FOX_DELETE_AROMAFM=1
 export FOX_DELETE_MAGISK_ADDON=1
 export FOX_DELETE_INITD_ADDON=1
 export FOX_REMOVE_BASH=1
 export FOX_REMOVE_AAPT=1
 export FOX_VARIANT="A15"
+# Extras
+export FOX_ENABLE_KERNELSU_SUPPORT=1
+export FOX_DELETE_AROMAFM=1
+export FOX_USE_ZIP_BINARY=1
+export FOX_USE_TAR_BINARY=1
+export FOX_USE_SED_BINARY=1
+export FOX_USE_GREP_BINARY=1
+export FOX_USE_XZ_UTILS=1
+export OF_ENABLE_LPTOOLS=1
+export FOX_ASH_IS_BASH=1
+export FOX_REPLACE_TOOLBOX_GETPROP=1
+export FOX_USE_BASH_SHELL=1
+export FOX_USE_NANO_EDITOR=1
