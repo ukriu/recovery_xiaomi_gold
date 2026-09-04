@@ -42,7 +42,7 @@ OF_FL_PATH1 := /sys/class/leds/mt6360_flash_ch1
 OF_FORCE_CASEFOLDING := 1
 
 # number of list options before scrollbar creation
-OF_OPTIONS_LIST_NUM := 9
+OF_OPTIONS_LIST_NUM := 4
 
 # ----- data format stuff -----
 # ensure that /sdcard is bind-unmounted before f2fs data repair or format
