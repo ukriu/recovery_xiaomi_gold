@@ -177,5 +177,11 @@ hqsys_pcba.ko
 hqsys_misc.ko
 gf_spi_tee.ko
 fpc1022_tee.ko
+mtk_mdpm_v1.ko
+mtk_dynamic_loading_throttling.ko
+mtk_pbm.ko
+mtk_low_battery_throttling.ko
+mtk_battery_oc_throttling.ko
+flashlight.ko
+v4l2-flash-led-class.ko
 leds-mt6360.ko
-
