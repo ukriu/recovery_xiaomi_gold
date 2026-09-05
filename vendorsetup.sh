@@ -17,7 +17,6 @@
 #
 # 	Please maintain this if you use this script or any part of it
 #
-export ALLOW_MISSING_DEPENDENCIES=true
 
 export FOX_VIRTUAL_AB_DEVICE=1
 export FOX_RECOVERY_VENDOR_BOOT_PARTITION="/dev/block/by-name/vendor_boot"
@@ -29,11 +28,5 @@ export TARGET_DEVICE_ALT=gold
 export FOX_VARIANT="A15"
 export FOX_USE_UPDATED_MAGISKBOOT=1
 export FOX_DELETE_MAGISK_ADDON=1
-
-# Extras
-export FOX_ENABLE_KERNELSU_SUPPORT=0
 export FOX_DELETE_AROMAFM=0
-export FOX_USE_GREP_BINARY=1
-export FOX_REPLACE_TOOLBOX_GETPROP=1
-export FOX_USE_BASH_SHELL=1
-export FOX_USE_NANO_EDITOR=1
+export FOX_USE_XZ_UTILS=1
