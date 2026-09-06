@@ -189,8 +189,10 @@ TW_ENABLE_FS_COMPRESSION := false
 # NO Haptics
 TW_NO_HAPTICS := true
 
-# Indicator
-#TW_CUSTOM_CPU_TEMP_PATH := "/sys/class/thermal/thermal_zone9/temp"
+# Temps
+# tz9 is mtktscpu temp, tz8 is battery temp
+# tz9 is not initalised in recovery environment with the current config
+TW_CUSTOM_CPU_TEMP_PATH := "/sys/class/thermal/thermal_zone8/temp"
 
 # init_boot ramdisk
 BOARD_VENDOR_RAMDISK_FRAGMENTS := init_boot
