@@ -186,8 +186,8 @@ TW_INCLUDE_FUSE_NTFS := true
 TW_INCLUDE_FUSE_EXFAT := true
 TW_ENABLE_FS_COMPRESSION := false
 
-# NO Haptics
-TW_NO_HAPTICS := true
+# Haptics
+TW_SUPPORT_INPUT_AIDL_HAPTICS := true
 
 # Temps
 # tz9 is mtktscpu temp, tz8 is battery temp

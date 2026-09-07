@@ -1,4 +1,6 @@
 import /init.mitee.rc
+import /init.vibrator.rc
+import /init.hals.rc
 
 # Set SELinux to Permissive
 on early-init
@@ -29,7 +31,7 @@ on late-fs
     mount_all /first_stage_ramdisk/fstab.mt6833 --late
 
 on post-fs
-    start boot-hal-1-2
+    start vendor.boot-default
 
 # Services
 service keymint-mitee /vendor/bin/hw/android.hardware.security.keymint@3.0-service.mitee
@@ -85,7 +87,7 @@ on property:crypto.ready=0
     stop miteelog
 
 on boot
-    start health-hal-2-1
+    start vendor.health-default
     start load-ts-drv
     setprop sys.usb.config adb
 
